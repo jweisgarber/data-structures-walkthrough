@@ -13,7 +13,7 @@ Class: CSE 212-Section 3
 Emails: wei17004@byui.edu, jaredweisgarber@yahoo.com
 
 # II. Queues
-Click [here](1-queues.md) to start learning about Stacks.
+Click [here](1-queues.md) to start learning about Queues.
 
 # III. Sets
 Click [here](2-sets.md) to start learning about Sets.
