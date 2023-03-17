@@ -6,7 +6,11 @@ be used to help solve the problem. In this tutorial we will specifically cover S
 Sets, and Trees. There is a section for each data structure. Have Fun!
 
 ### Contact Info
-Jared Weisgarber, CSE 212-Section 3, wei17004@byui.edu
+Name: Jared Weisgarber
+
+Class: CSE 212-Section 3
+
+Emails: wei17004@byui.edu, jaredweisgarber@yahoo.com
 
 # II. Queues
 Click [here](1-queues.md) to start learning about Stacks.

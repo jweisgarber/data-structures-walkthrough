@@ -4,7 +4,7 @@ this project are all written using C#. Three different structures are covered: Q
 basics of each of these data structures and learn about how to use them in your code.
 
 # Getting Started
-To get started with this walkthrough, go to [0-welcome.md](). There you can start learning more about each of the data structures.
+To get started with this walkthrough, go to [0-welcome.md](0-welcome.md). There you can start learning more about each of the data structures.
 
 # Contact Info
 Name: Jared Weisgarber
