@@ -34,10 +34,17 @@ public class Main{
             }
             else if (choice == "2")
             {
-                Console.WriteLine("Now Testing Sets.cs");
-                Console.WriteLine("==================================================");
-                Console.WriteLine();
-                TestSets();
+                int select = SelectProgram();
+                if (select == 1)
+                    KMap.Test();
+                else
+                {
+                    Console.WriteLine("Now Testing Sets-Problem.cs");
+                    Console.WriteLine("==================================================");
+                    Console.WriteLine();
+                    TestSets();
+                }
+
                 finished = true;
             }
             else if (choice == "3")
@@ -97,10 +104,43 @@ public class Main{
 
     private static void TestSets()
     {
+        // var library = new Library();
+        var library = new LibrarySol();
+        
+        // Test 1: Checkout a book from an empty library
+        // Output: "We do not have 'The Way of Kings' here."
         Console.WriteLine("Test 1");
-        var kmap1 = new KMap("ABC + ABD + AB'CD");
-        kmap1.FindInputs();
-        kmap1.DisplayInputs();
+        library.CheckoutBook("The Way of Kings");
+        Console.WriteLine();
+        
+        // Test 2: Add books to the library and checkout one of them.
+        // Output: "Checking out: The Way of Kings"
+        Console.WriteLine("Test 2");
+        library.AddBook("The Way of Kings");
+        library.AddBook("Cytonic");
+        library.AddBook("Starsight");
+        library.AddBook("The Name of the Wind");
+        library.AddBook("Skyward");
+        library.AddBook("Words of Radiance");
+        library.AddBook("Sufficiently Advanced Magic");
+        
+        library.CheckoutBook("The Way of Kings");
+        Console.WriteLine();
+        
+        // Test 3: Checkout more books than are available.
+        // Output: "Checking out: The Name of the Wind"
+        //         "There are no copies of 'The Name of the Wind' available."
+        Console.WriteLine("Test 3");
+        library.CheckoutBook("The Name of the Wind");
+        library.CheckoutBook("The Name of the Wind");
+        Console.WriteLine();
+        
+        // Test 4: Check how many copies of 'Words of Radiance' are available.
+        // Output: 2 copies of 'Words of Radiance' are available.
+        Console.WriteLine("Test 4");
+        library.AddBook("Words of Radiance");
+        int copies = library.CheckAvailability("Words of Radiance");
+        Console.WriteLine($"{copies} copies of 'Words of Radiance' are available.");
     }
 
     private static void TestTrees()
