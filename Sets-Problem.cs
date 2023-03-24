@@ -46,13 +46,12 @@ public class Library
      *     book (string) = The name of the book
      *
      * Return:
-     *     True = There are copies available
-     *     False = There are no copies available 
+     *     (int) = The number of copies available in the library
      */
-    public bool CheckAvailability(string book)
+    public int CheckAvailability(string book)
     {
-        
-        return false;
+      
+        return 0;
     }
 
     /*

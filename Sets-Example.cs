@@ -29,5 +29,11 @@ public class KMap {
         var kmap1 = new KMap("ABC + ABD + AB'CD");
         kmap1.FindInputs();
         kmap1.DisplayInputs();
+        Console.WriteLine();
+        
+        Console.WriteLine("Test 2");
+        kmap1 = new KMap("ABcD + AcD + bC + Bd");
+        kmap1.FindInputs();
+        kmap1.DisplayInputs();
     }
 }
