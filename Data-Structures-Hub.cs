@@ -49,10 +49,17 @@ public class Main{
             }
             else if (choice == "3")
             {
-                Console.WriteLine("Now Testing Trees.cs");
-                Console.WriteLine("==================================================");
-                Console.WriteLine();
-                TestTrees();
+                int select = SelectProgram();
+                if (select == 1)
+                    TestTreesExample();
+               
+                else {
+                    Console.WriteLine("Now Testing Trees-Problem.cs");
+                    Console.WriteLine("==================================================");
+                    Console.WriteLine();
+                    TestTrees();
+                }
+
                 finished = true;
             }
             else
@@ -145,7 +152,72 @@ public class Main{
 
     private static void TestTrees()
     {
+        var tree = new RacersTree();
+        // var tree = new RacersTreeSol();
+
+        List<string> sprint = new List<string>()
+        {
+            "Bruce Duran,10.57",
+            "Amber Nelson,10.72",
+            "Tamzin Peck,10.84",
+            "Maisha Hewitt,10.87",
+            "Nathaniel Kaufman,10.91",
+            "Jack Calhoun,10.98",
+            "Marnie Archer,11.01",
+            "Reuben Richmond,11.12",
+            "Vincent Taylor,11.13",
+            "Arman Rivera,11.43",
+            "Mattie Mercado,11.87",
+            "Kathleen Carlson,12.23",
+            "Mark Rojas,12.24",
+            "Liana Ayers,12.44",
+            "Mollie Lynch,12.65"
+        };
         
+        foreach (var line in sprint)
+        {
+            var elements = line.Split(",");
+            tree.Insert(elements[0], Convert.ToDouble(elements[1]));
+        }
+
+        var count = 1;
+        foreach (var racer in tree)
+        {
+            Console.WriteLine($"{count}. {racer.Item1} - {racer.Item2}s");
+            count++;
+        }
+        
+        Console.WriteLine();
+        
+        // Test 2: Get the racer that finished at each time.
+        Console.WriteLine("Test 2");
+        var name = tree.GetRacer(11.01d); //Marnie Archer
+        Console.WriteLine($"{name} finished in 11.01s");
+        
+        Console.WriteLine();
+
+        name = tree.GetRacer(10.93d);
+        Console.WriteLine($"{name} finished in 10.93s");
+    }
+
+    public static void TestTreesExample()
+    {
+        var tree = new BinarySearchTree();
+        int[] numbers = { 1, 15, 23, 53, 83, 98, 122, 134, 139, 151, 157, 178, 189 };
+        foreach (var number in numbers)
+            tree.Insert(number);
+        
+        Console.WriteLine("Trees Example Test");
+        Console.WriteLine(tree.ToString());
+        Console.WriteLine();
+        Console.WriteLine($"The tree contains 122: {tree.Contains(122)}");
+        Console.WriteLine($"The tree contains 127: {tree.Contains(127)}");
+        Console.WriteLine();
+        Console.WriteLine("The values in reverse order:");
+        foreach (var item in tree.Reverse())
+        {
+            Console.WriteLine(item);
+        }
     }
 
     private static int SelectProgram()
