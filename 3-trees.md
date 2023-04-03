@@ -5,7 +5,14 @@ everything begins, and other subsystems branch out from the root. One major
 example of the Tree data structure is the file system that your computer uses.
 You have a root file to which all of your other files can trace back to.
 
-## i. Example - Binary Search Tree
+## i. Recursion
+Trees are inherently recursive. Recursion is the process of taking a bigger problem
+and progressively breaking it down into smaller parts. Recursive functions call themselves
+within their function. They need to have a base case by default, and a way to
+break the problem down into smaller parts. The following example and problem use
+recursion to create and edit the tree.
+
+## ii. Example - Binary Search Tree
 The binary search tree is a data structure in which all the data is placed into
 a tree data structure, and each node of the tree branches off to the left and right.
 on the left you might find values that are less than the value stored in the current
@@ -23,7 +30,7 @@ Binary Search tree, and shows a few of the different functions you can implement
 it to use in your program. Open the file and examine the code to learn more about the
 structure.
 
-## ii. Problem - Racers and Race Times
+## iii. Problem - Racers and Race Times
 You can use a tree structure to store the names and times of different racers for quick
 access to the data. Your goal is to be able to implement the missing functions in
 [Trees-Problem.cs](Trees-Problem.cs) and test them.

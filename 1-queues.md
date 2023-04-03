@@ -3,7 +3,7 @@ Think about every time you go to the grocery store and stand in the checkout lin
 person in line is the first person to be helped. This is exactly what the queue data structure
 does in programming. The first thing to enter the queue will be the first thing to leave the
 queue. Just like the car lifts below, the first to leave will be the first to arrive. There is
-an order that is followed with queues, and they maintain that order
+an order that is followed with queues, and they maintain that order.
 ![Gondolas](/Pictures/pexels-max-mishin-10025723.jpg)
 
 ## i. Using the structure in C#
@@ -13,6 +13,8 @@ as follows:
 `var shoppingLine = new Queue<string>();`
 
 This would provide us with a brand new queue that stores string values.
+Adding items to the queue usually takes O(n) time while removing from the queue
+takes O(1) time.
 
 ## ii. Example
 Let's get started by observing the queue at work. In [Queues-Example.cs](Queues-Example.cs),
@@ -23,7 +25,7 @@ from the queue. They are:
 
 `myqueue.Enqueue(item);` and `myqueue.Dequeue();`
 
-To see how this all, open [Data-Structures-Hub.cs](Data-Structures-Hub.cs) and run
+To see how it all works, open [Data-Structures-Hub.cs](Data-Structures-Hub.cs) and run
 the program. Select Queues and the Example when prompted.
 
 ## iii. Problem
